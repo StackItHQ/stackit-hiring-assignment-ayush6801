@@ -69,7 +69,7 @@ There are 2 files for this git repository one is .gs file while other is html fi
 
 
 
-      a. onOpen() Function
+      a. onOpen() Function:
     
     This function is an Apps Script trigger that runs automatically when the Google Sheets document is opened.
     The SpreadsheetApp.getUi() method is used to get access to the user interface of the active spreadsheet.
