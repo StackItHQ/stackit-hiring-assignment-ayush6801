@@ -63,37 +63,67 @@ Video Demonstration link: https://drive.google.com/file/d/1XypJcPVCFifMACVWxsWK-
 There are 2 files for this git repository one is .gs file while other is html file let's discuss each file one by one.
  1. Code.gs (Google Apps Script)
 
+ 
     This file contains the backend of my import CSV or we can say it helped set of functions written in JavaScript that run on Google's servers and can be used to automate tasks in Google Workspace applications in our case Google Sheets.
 
+
     In this, I had used 3 functions:
-    
+
+
       a. onOpen() Function:
+    
          This function is an Apps Script trigger that runs automatically when the Google Sheets document is opened.
          The SpreadsheetApp.getUi() method is used to get access to the user interface of the active spreadsheet.
          createMenu is used to create a custom menu named "Import CSV." addItem adds a menu item to the custom menu. In our case, it's "Open File Upload Form," and it's associated with the showFileUploadForm function.
          addToUi adds the custom menu to the Google Sheets UI.
+
       b. showFileUploadForm() Function:
+
+
            This function creates an HTML modal dialog using HtmlService.createHtmlOutputFromFile('Index').
            The HTML file named 'Index' is used as the content of the modal dialog.
            setTitle sets the title of the modal dialog, and setWidth sets its width.
            SpreadsheetApp.getUi().showModalDialog(html, 'File Upload Form'); displays the modal dialog to the user.
+
+
       c. importCSV(data, selectedColumns) Function:
+
+
            This is the function where magic happens which import CSV file to our Google sheet.
            This function takes two parameters: data (CSV file data) and selectedColumns (an array of indices of selected columns) and these parameters are passed from our html which we will see sortly.
            It uses Utilities.parseCsv(data) to parse the CSV data into a 2D array.
            If no columns are selected (selectedColumns is empty), it imports all columns to the Google Sheet starting from the last row.
            If specific columns are selected, it filters the data to include only those columns and imports them into the Google Sheet.
+
+    
   3. HTML Code (Index.html):
+
+
        This file contains our front end. It is responsible for creating the user interface that allows users to drag-and-drop file and select the column that they want to import.
+
+     
        This code manly consists of HTML and CSS but let me talk about a few functions which are important in this file.
+
+     
          a. handleFile(file):
+
+     
              This function is called when a file is selected or dropped.
              It uses FileReader to read the contents of the file as text and then calls populateColumnSelect to populate the column selection dropdown.
+
+     
          b. populateColumnSelect(data):
+
+     
              This function takes the CSV data and populates the dropdown with column names based on the first row of the CSV.
+
+     
          c. importCSV():
+
+     
              This function is called when the "Import" button is clicked.
              It reads the selected file, gets the selected columns, and uses google.script.run to invoke the importCSV function in the Google Apps Script with the data and selected columns.
   
+
   
-  *Thank you this was a fun project and I learned so many things I appreciate this new approach for hiring.*
+  *Thank you this was a fun project and I learned so many things I appreciate this new hiring approach.*
