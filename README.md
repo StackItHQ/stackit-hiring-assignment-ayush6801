@@ -104,24 +104,24 @@ There are 2 files for this git repository one is .gs file while other is html fi
        This code manly consists of HTML and CSS but let me talk about a few functions which are important in this file.
 
      
-         a. handleFile(file):
+     a. handleFile(file):
 
      
-             This function is called when a file is selected or dropped.
-             It uses FileReader to read the contents of the file as text and then calls populateColumnSelect to populate the column selection dropdown.
+     This function is called when a file is selected or dropped.
+     It uses FileReader to read the contents of the file as text and then calls populateColumnSelect to populate the column selection dropdown.
 
      
-         b. populateColumnSelect(data):
+     b. populateColumnSelect(data):
 
      
-             This function takes the CSV data and populates the dropdown with column names based on the first row of the CSV.
+     This function takes the CSV data and populates the dropdown with column names based on the first row of the CSV.
 
      
-         c. importCSV():
+     c. importCSV():
 
      
-             This function is called when the "Import" button is clicked.
-             It reads the selected file, gets the selected columns, and uses google.script.run to invoke the importCSV function in the Google Apps Script with the data and selected columns.
+     This function is called when the "Import" button is clicked.
+     It reads the selected file, gets the selected columns, and uses google.script.run to invoke the importCSV function in the Google Apps Script with the data and selected columns.
   
 
   
