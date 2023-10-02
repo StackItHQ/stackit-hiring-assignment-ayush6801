@@ -88,20 +88,20 @@ There are 2 files for this git repository one is .gs file while other is html fi
       c. importCSV(data, selectedColumns) Function:
 
 
-           This is the function where magic happens which import CSV file to our Google sheet.
-           This function takes two parameters: data (CSV file data) and selectedColumns (an array of indices of selected columns) and these parameters are passed from our html which we will see sortly.
-           It uses Utilities.parseCsv(data) to parse the CSV data into a 2D array.
-           If no columns are selected (selectedColumns is empty), it imports all columns to the Google Sheet starting from the last row.
-           If specific columns are selected, it filters the data to include only those columns and imports them into the Google Sheet.
+    This is the function where magic happens which import CSV file to our Google sheet.
+    This function takes two parameters: data (CSV file data) and selectedColumns (an array of indices of selected columns) and these parameters are passed from our HTML which we will see shortly.
+    It uses Utilities.parseCsv(data) to parse the CSV data into a 2D array.
+    If no columns are selected (selectedColumns is empty), it imports all columns to the Google Sheet starting from the last row.
+    If specific columns are selected, it filters the data to include only those columns and imports them into the Google Sheet.
 
     
   3. HTML Code (Index.html):
 
 
-       This file contains our front end. It is responsible for creating the user interface that allows users to drag-and-drop file and select the column that they want to import.
+     This file contains our front end. It is responsible for creating the user interface that allows users to drag-and-drop file and select the column that they want to import.
 
      
-       This code manly consists of HTML and CSS but let me talk about a few functions which are important in this file.
+     This code manly consists of HTML and CSS but let me talk about a few functions which are important in this file.
 
      
      a. handleFile(file):
