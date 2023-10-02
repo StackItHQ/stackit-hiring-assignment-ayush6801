@@ -67,7 +67,6 @@ There are 2 files for this git repository one is .gs file while other is html fi
     This file contains the backend of my import CSV or we can say it helped set of functions written in JavaScript that run on Google's servers and can be used to automate tasks in Google Workspace applications in our case Google Sheets.
 
 
-    In this, I had used 3 functions:
 
 
       a. onOpen() Function
