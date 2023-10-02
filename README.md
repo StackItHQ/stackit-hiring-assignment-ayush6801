@@ -79,7 +79,7 @@ There are 2 files for this git repository one is .gs file while other is html fi
 
       b. showFileUploadForm() Function:
 
-           This function creates an HTML modal dialog using HtmlService.createHtmlOutputFromFile('Index').
+    This function creates an HTML modal dialog using HtmlService.createHtmlOutputFromFile('Index').
            The HTML file named 'Index' is used as the content of the modal dialog.
            setTitle sets the title of the modal dialog, and setWidth sets its width.
            SpreadsheetApp.getUi().showModalDialog(html, 'File Upload Form'); displays the modal dialog to the user.
