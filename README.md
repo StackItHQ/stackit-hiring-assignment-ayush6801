@@ -71,7 +71,6 @@ There are 2 files for this git repository one is .gs file while other is html fi
 
 
       a. onOpen() Function
-    
          This function is an Apps Script trigger that runs automatically when the Google Sheets document is opened.
          The SpreadsheetApp.getUi() method is used to get access to the user interface of the active spreadsheet.
          createMenu is used to create a custom menu named "Import CSV." addItem adds a menu item to the custom menu. In our case, it's "Open File Upload Form," and it's associated with the showFileUploadForm function.
