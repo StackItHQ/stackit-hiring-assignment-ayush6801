@@ -62,8 +62,11 @@ Video Demonstration link: https://drive.google.com/file/d/1XypJcPVCFifMACVWxsWK-
 # Approach for this question 
 There are 2 files for this git repository one is .gs file while other is html file let's discuss each file one by one.
  1. Code.gs (Google Apps Script)
+
     This file contains the backend of my import CSV or we can say it helped set of functions written in JavaScript that run on Google's servers and can be used to automate tasks in Google Workspace applications in our case Google Sheets.
+
     In this, I had used 3 functions:
+    
       a. onOpen() Function:
          This function is an Apps Script trigger that runs automatically when the Google Sheets document is opened.
          The SpreadsheetApp.getUi() method is used to get access to the user interface of the active spreadsheet.
@@ -80,7 +83,7 @@ There are 2 files for this git repository one is .gs file while other is html fi
            It uses Utilities.parseCsv(data) to parse the CSV data into a 2D array.
            If no columns are selected (selectedColumns is empty), it imports all columns to the Google Sheet starting from the last row.
            If specific columns are selected, it filters the data to include only those columns and imports them into the Google Sheet.
-  2. HTML Code (Index.html):
+  3. HTML Code (Index.html):
        This file contains our front end. It is responsible for creating the user interface that allows users to drag-and-drop file and select the column that they want to import.
        This code manly consists of HTML and CSS but let me talk about a few functions which are important in this file.
          a. handleFile(file):
